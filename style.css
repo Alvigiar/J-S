@@ -13,6 +13,17 @@ a:hover{
     text-shadow: 2px 2px 3px black;
 }
 
+/* Основные настройки */
+.order__title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.order__text{
+    font-size: 18px;
+}
+/* / Основные настройки */
 /* Header */
 .navigation__panel{
     display: none;
@@ -49,10 +60,7 @@ a:hover{
     color: #aaa;
     background-color: #fff;
 }
-
-
 /* / Header */
-
 /* Main */
 /* Оглавление */
 .navigation__content a{
@@ -60,7 +68,6 @@ a:hover{
     color: #0000CD;
 }
 /* / Оглавление */
-
 /* Регламент */
 .reglament__list{
     font-size: 18px;
@@ -72,23 +79,22 @@ a:hover{
 }
 /* / Регламент */
 
-/* Стандартные настройки */
-.order__title{
-    display: flex;
-    justify-content: center;
+.order__img{
+    display: block;
     text-align: center;
 }
-
-.order__text{
-    font-size: 18px;
+@media (max-width:575px){
+    .insignia__img{
+        width: 100%;
+    }
+}
+@media (min-width:575px){
+    .insignia__img{
+        width: 500px;
+    }
 }
 
-.order__list{
-    
-}
-/* / Стандартные настройки */
 
 /* / Main */
-
 /* Footer */
 /* / Footer */
