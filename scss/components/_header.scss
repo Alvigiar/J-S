@@ -1,0 +1,35 @@
+.navigation__panel{
+    display: none;
+    justify-content: space-between;
+}
+@media (max-width:575px){
+    .navigation__panel{
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.container__content{
+    display: flex;
+    justify-content: center;
+}
+
+.navigation__link{
+    font-size: 18px;
+    text-decoration: none;
+    color: #0000CD;
+}
+
+.navigation__link__home{
+    display: inline-block;
+    position: fixed;
+    padding: 5px;
+    border: 4px ridge #aaa;
+    border-radius: 20px;
+    bottom: 20px;
+    right: 20px;
+    outline: 20px;
+    text-decoration: none;
+    color: #aaa;
+    background-color: #fff;
+}
