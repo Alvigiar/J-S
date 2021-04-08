@@ -12,22 +12,12 @@
 <body>
     <!-- Header -->
     <header class="wrapper" id="navigation">
-        <a class="navigation__link__home" href="#navigation">Главная</a>
-        <nav class="navigation__panel">
-            <a class="navigation__link" href="#regulatory">Регламентирующие приказы</a>
-            <a class="navigation__link" href="#regulations">Боевой устав</a>
-            <a class="navigation__link" href="#"></a>
-            <a class="navigation__link" href="#"></a>
-            <a class="navigation__link" href="#"></a>
-        </nav>
-    </header>
-    <!-- / Header -->
-
-    <!-- Main -->
-    <main class="wrapper">
-
-        <!-- Оглавление -->
-        <div class="container__content">
+        <aside class="menu">
+            <div class="container__button">
+              <button class="button__close-menu">Закрыть оглавление</button>
+            </div>
+        <a class="navigation__home" href="#navigation">Главная</a>
+        <nav class="container__content">
             <ol class="navigation__content">
                 <li><a href="#regulatory">Регламентирующие приказы</a></li>
                 <li><a href="#regulations">Боевой устав №250 от 29.07.19г.</a>
@@ -45,9 +35,9 @@
                                 <li value="231"><a href="#nds">Непригодная для дыхании среда</a></li>
                                 <li><a href="#climatic">Климатические условия</a></li>
                                 <li><a href="#water">Недостаток воды</a></li>
-                                <li><a href="№explosing">Взрывчатые материалы</a></li>
-                                <li><a href="№war">Военные действия</a></li>
-                                <li><a href="№rad">Радиоактивные вещества</a></li>
+                                <li><a href="#explosing">Взрывчатые материалы</a></li>
+                                <li><a href="#war">Военные действия</a></li>
+                                <li><a href="#rad">Радиоактивные вещества</a></li>
                             </ol>
                         </li>
                         <li><a href="#insignia">Знаки различия на касках</a></li>
@@ -56,9 +46,18 @@
                 <li><a href="#">4</a></li>
                 <li><a href="#">5</a></li>
             </ol>
+        </nav>
+        </aside>
+        <div class="container__button">
+            <button class="button__open-menu">Открыть оглавление</button>
         </div>
-        <!-- / Оглавление -->
+    </header>
+    <!-- / Header -->
 
+
+    
+    <!-- Main -->
+    <main class="wrapper">
         <!-- Регламент -->
         <div class="container__reglament">
             <h1 class="order__title" id="regulatory">Регламентирующие приказы</h1>
@@ -586,6 +585,24 @@
     <!-- Footer -->
     <!-- / Footer -->
     <script type="module" src="/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() { // добавляем эвент, запускающий скрипт после загрузки контента страницы.
+          const menu = document.querySelector('.menu'); // находим элемент меню в документе.
+          const menuOpenBtn = document.querySelector('.button__open-menu'); // находим элемент кнопки открытия в документе.
+          const menuCloseBtn = document.querySelector('.button__close-menu'); // находим элемент кнопки закрытия в документе.
+      
+          function openMenu() { // функция открытия меню, которая добавляет класс "open" элементу "menu"
+            menu.classList.add('open');
+          }
+          function closeMenu() { // функция закрытия меню, удаляющая класс "open" у элементу "menu"
+            menu.classList.remove('open');
+          }
+      
+          menuOpenBtn.addEventListener('click', openMenu); // Добавляем эвент, запускающий функцию открытия меню
+          menuCloseBtn.addEventListener('click', closeMenu); // Добавляем эвент, запускающий функцию закрытия меню
+      
+        });
+      </script>
 </body>
 
 </html>
