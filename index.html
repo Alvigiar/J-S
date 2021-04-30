@@ -12,41 +12,44 @@
 <body>
     <!-- Header -->
     <header class="wrapper" id="navigation">
+        <!-- Кнопка вверх -->
+        <div><a id='top' /></div>
+        <div><a href="#top" class="idTop">ВВЕРХ</a></div>
+        <!-- / Кнопка вверх -->
         <aside class="menu">
-            <div class="container__button">
-              <button class="button__close-menu">Закрыть оглавление</button>
+            <div class="container__button-close">
+                <button class="button__close-menu">Закрыть оглавление</button>
             </div>
-        <a class="navigation__home" href="#navigation">Главная</a>
-        <nav class="container__content">
-            <ol class="navigation__content">
-                <li><a href="#regulatory">Регламентирующие приказы</a></li>
-                <li><a href="#regulations">Боевой устав №250 от 29.07.19г.</a>
-                    <ol class="regulations__container">
-                        <li value="201"><a href="#general">Общие положения</a></li>
-                        <li><a href="#operations">Боевые действия</a></li>
-                        <ol class="operations__container">
-                            <li value="221"><a href="#explorations">Разведка пожара</a></li>
-                            <li><a href="#help">Спасение людей и имущества</a></li>
-                            <li><a href="#deployment">Боевое развертывание</a></li>
-                            <li><a href="#extinguishing">Тушение пожара</a></li>
-                        </ol>
-                        <li><a href="#difficult-conditions">Тушение пожаров в сложных условиях</a>
-                            <ol>
-                                <li value="231"><a href="#nds">Непригодная для дыхании среда</a></li>
-                                <li><a href="#climatic">Климатические условия</a></li>
-                                <li><a href="#water">Недостаток воды</a></li>
-                                <li><a href="#explosing">Взрывчатые материалы</a></li>
-                                <li><a href="#war">Военные действия</a></li>
-                                <li><a href="#rad">Радиоактивные вещества</a></li>
+            <nav class="container__content">
+                <ol class="navigation__content">
+                    <li><a href="#regulatory">Регламентирующие приказы</a></li>
+                    <li><a href="#regulations">Боевой устав №250 от 29.07.19г.</a>
+                        <ol class="regulations__container">
+                            <li value="201"><a href="#general">Общие положения</a></li>
+                            <li><a href="#operations">Боевые действия</a></li>
+                            <ol class="operations__container">
+                                <li value="221"><a href="#explorations">Разведка пожара</a></li>
+                                <li><a href="#help">Спасение людей и имущества</a></li>
+                                <li><a href="#deployment">Боевое развертывание</a></li>
+                                <li><a href="#extinguishing">Тушение пожара</a></li>
                             </ol>
-                        </li>
-                        <li><a href="#insignia">Знаки различия на касках</a></li>
-                    </ol>
-                </li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-            </ol>
-        </nav>
+                            <li><a href="#difficult-conditions">Тушение пожаров в сложных условиях</a>
+                                <ol>
+                                    <li value="231"><a href="#nds">Непригодная для дыхании среда</a></li>
+                                    <li><a href="#climatic">Климатические условия</a></li>
+                                    <li><a href="#water">Недостаток воды</a></li>
+                                    <li><a href="#explosing">Взрывчатые материалы</a></li>
+                                    <li><a href="#war">Военные действия</a></li>
+                                    <li><a href="#rad">Радиоактивные вещества</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="#insignia">Знаки различия на касках</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ol>
+            </nav>
         </aside>
         <div class="container__button">
             <button class="button__open-menu">Открыть оглавление</button>
@@ -55,7 +58,7 @@
     <!-- / Header -->
 
 
-    
+
     <!-- Main -->
     <main class="wrapper">
         <!-- Регламент -->
@@ -78,7 +81,8 @@
         <!-- Боевой устав №250 -->
         <div class="order">
             <h1 class="order__title" id="regulations">Боевой Устав №250 от 29.07.2019 года.</h1>
-
+            <a class="order__title"
+                href="http://dnmchs.ru/static/upload/pologenie/%D0%91%D0%BE%D0%B5%D0%B2%D0%BE%D0%B9%20%D1%83%D1%81%D1%82%D0%B0%D0%B2.pdf" target="_blank">Источник</a>
             <!-- Общие положения -->
             <h2 class="order__title" id="general">Общие положения</h2>
             <div class="order__text">
@@ -565,6 +569,7 @@
             <!-- / Знаки различия -->
 
         </div>
+
         <!-- / Боевой устав №250 -->
 
         <!-- ГДЗС №343 -->
@@ -586,23 +591,23 @@
     <!-- / Footer -->
     <script type="module" src="/main.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() { // добавляем эвент, запускающий скрипт после загрузки контента страницы.
-          const menu = document.querySelector('.menu'); // находим элемент меню в документе.
-          const menuOpenBtn = document.querySelector('.button__open-menu'); // находим элемент кнопки открытия в документе.
-          const menuCloseBtn = document.querySelector('.button__close-menu'); // находим элемент кнопки закрытия в документе.
-      
-          function openMenu() { // функция открытия меню, которая добавляет класс "open" элементу "menu"
-            menu.classList.add('open');
-          }
-          function closeMenu() { // функция закрытия меню, удаляющая класс "open" у элементу "menu"
-            menu.classList.remove('open');
-          }
-      
-          menuOpenBtn.addEventListener('click', openMenu); // Добавляем эвент, запускающий функцию открытия меню
-          menuCloseBtn.addEventListener('click', closeMenu); // Добавляем эвент, запускающий функцию закрытия меню
-      
+        document.addEventListener('DOMContentLoaded', function () { // добавляем эвент, запускающий скрипт после загрузки контента страницы.
+            const menu = document.querySelector('.menu'); // находим элемент меню в документе.
+            const menuOpenBtn = document.querySelector('.button__open-menu'); // находим элемент кнопки открытия в документе.
+            const menuCloseBtn = document.querySelector('.button__close-menu'); // находим элемент кнопки закрытия в документе.
+
+            function openMenu() { // функция открытия меню, которая добавляет класс "open" элементу "menu"
+                menu.classList.add('open');
+            }
+            function closeMenu() { // функция закрытия меню, удаляющая класс "open" у элементу "menu"
+                menu.classList.remove('open');
+            }
+
+            menuOpenBtn.addEventListener('click', openMenu); // Добавляем эвент, запускающий функцию открытия меню
+            menuCloseBtn.addEventListener('click', closeMenu); // Добавляем эвент, запускающий функцию закрытия меню
+
         });
-      </script>
+    </script>
 </body>
 
 </html>

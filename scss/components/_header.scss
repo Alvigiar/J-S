@@ -5,12 +5,34 @@
     left: 0;
     height: 100%;
     width: 100%;
-    max-width: 320px;
+    max-width: 350px;
     background-color: #fff;
     box-shadow: 0 0 11px #c8c8c8;
     transition: transform 0.3s;
     transform: translateX(-110%);
 }
+@media (max-width:576px){
+    .menu{
+        max-width: 320px;
+    }
+}
+// Кнопка вверх
+a.idTop {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    // background: #7db9e8;
+    opacity: .3;
+    color: black;
+    padding: 10px;
+    margin: 5px 15px 15px 5px;
+    text-decoration: none;
+}
+a.idTop:hover {
+    opacity: 1;
+}
+// / Кнопка вверх
 
 .menu.open {
     transform: translateX(0);
@@ -19,24 +41,16 @@
 .container__button{
     top: 0;
     position: fixed;
-}
-.button__open-menu{
     z-index: 0;
+}
+
+.button__close-menu{
+    top: 0;
+    right: 0;
 }
 
 .container__content{
     display: flex;
     justify-content: center;
     margin-top: 10%;
-}
-
-.navigation__home{
-    display: inline-block;
-    position: fixed;
-    border-radius: 20px;
-    top: 0;
-    right: 0;
-    text-decoration: none;
-    color: black;
-    background-color: #fff;
 }
